@@ -2,11 +2,15 @@
 
 from flask import Flask, render_template
 from random import choice
-import jinja2
+import jinja2, os
 
 app = Flask(__name__)
 
 @app.route("/")
+def home():
+    return render_template('index.html')
+
+@app.route("/sloth")
 def show_sloth():
 
     QUOTES = ["Your self worth is determined by you. You don't have to depend on someone telling you who you are.",
@@ -20,7 +24,11 @@ def show_sloth():
 
     quote_choice = choice(QUOTES)
 
-    return render_template('index.html', quote = quote_choice)
+    imgs_list = os.listdir("./static/img")
+
+    img_choice = choice('imgs_list')
+
+    return(quote_choice, img_choice)
 
 if __name__ == "__main__":
     app.run(debug=True)
