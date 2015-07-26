@@ -19,7 +19,7 @@ function showSloth(evt) {
 
 }
 
-$("#sloth-button").on('submit', showSloth);
+$("#sloth-button").on('click', showSloth);
 
 // Test for console
 // function switchSloth(obj) {
