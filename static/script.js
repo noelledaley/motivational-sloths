@@ -10,10 +10,10 @@ function showSloth(evt) {
 
   $.get("/sloth", "hello server",
     function(results) {
-      console.log(results[0]);
-      console.log(results[1]);
-      slothImg.attr('src', '/static/img/' + results[0]);
-      quoteArea.innerText(results[1]);
+      console.log(results['imgPath']);
+      console.log(results['quote']);
+      slothImg.attr('src', '/static/img/' + results['imgPath']);
+      quoteArea.innerText(results['quote']);
 
     }
   );

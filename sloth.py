@@ -30,9 +30,7 @@ def show_sloth():
 
     img_choice = choice(os.listdir("./static/img/"))
 
-    img_quote = [img_choice, quote_choice]
-
-    return jsonify(img_quote=img_quote)
+    return jsonify({'imgPath': img_choice, 'quote': quote_choice})
 
 if __name__ == "__main__":
     app.run(debug=True)
