@@ -1,6 +1,6 @@
 """ Generates a random sloth and motivational quote each time user clicks on img. """
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from random import choice
 import jinja2, os
 
@@ -12,6 +12,9 @@ def home():
 
 @app.route("/sloth")
 def show_sloth():
+
+    print 'Hello server!'
+    print request.args
 
     QUOTES = ["Your self worth is determined by you. You don't have to depend on someone telling you who you are.",
         "I felt like it was time to set up my future, so I set a goal. My goal was independence.",
