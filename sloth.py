@@ -9,7 +9,18 @@ app = Flask(__name__)
 @app.route("/")
 def show_sloth():
 
-    return render_template('')
+    QUOTES = ["Your self worth is determined by you. You don't have to depend on someone telling you who you are.",
+        "I felt like it was time to set up my future, so I set a goal. My goal was independence.",
+        "We need to reshape our own perception of how we view ourselves. We have to step up as women and take the lead.",
+        "I am a woman and when I think, I must speak.",
+        "Power's not given to you. You have to take it.",
+        "Take all the rules away. How can we live if we don't change?",
+        "Perfection is a disease of a nation.",
+        ]
+
+    quote_choice = choice(QUOTES)
+
+    return render_template('index.html', quote = quote_choice)
 
 if __name__ == "__main__":
     app.run(debug=True)
