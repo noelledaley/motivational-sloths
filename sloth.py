@@ -18,7 +18,7 @@ def show_sloth():
     print request.args
 
     QUOTES = ["Your self worth is determined by you. You don't have to depend on someone telling you who you are.",
-        "I felt like it was time to set up my future, so I set a goal. My goal was independence.",
+    "I felt like it was time to set up my future, so I set a goal. My goal was independence.",
         "We need to reshape our own perception of how we view ourselves. We have to step up as women and take the lead.",
         "I am a woman and when I think, I must speak.",
         "Power's not given to you. You have to take it.",
