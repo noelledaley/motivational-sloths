@@ -1,6 +1,8 @@
 var slothImg = $('#rand-sloth');
 var quoteArea = $('#quote');
 
+console.log("Let's make sure my javascript is working.")
+
 function showSloth(evt) {
   debugger;
   console.log('you clicked the button!');

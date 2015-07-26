@@ -14,7 +14,7 @@ def home():
 @app.route("/sloth")
 def show_sloth():
 
-    print 'Hello server!'
+    print 'Server has received .get request!'
     print request.args
 
     QUOTES = ["Your self worth is determined by you. You don't have to depend on someone telling you who you are.",
