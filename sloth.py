@@ -24,11 +24,11 @@ def show_sloth():
 
     quote_choice = choice(QUOTES)
 
-    imgs_list = os.listdir("./static/img")
+    img_choice = choice(os.listdir("./static/img/"))
 
-    img_choice = choice('imgs_list')
+    img_quote = [img_choice, quote_choice]
 
-    return(quote_choice, img_choice)
+    return(img_quote)
 
 if __name__ == "__main__":
     app.run(debug=True)
