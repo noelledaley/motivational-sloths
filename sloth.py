@@ -8,14 +8,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    print 'We are at the home page.'
     return render_template('index.html')
 
 @app.route("/sloth")
 def show_sloth():
-
-    print 'Server has received .get request!'
-    print request.args
 
     QUOTES = ["Your self worth is determined by you. You don't have to depend on someone telling you who you are.",
     "I felt like it was time to set up my future, so I set a goal. My goal was independence.",
@@ -27,7 +23,6 @@ def show_sloth():
         ]
 
     quote_choice = choice(QUOTES)
-
     img_choice = choice(os.listdir("./static/img/"))
 
     return jsonify({'imgPath': img_choice, 'quote': quote_choice})
